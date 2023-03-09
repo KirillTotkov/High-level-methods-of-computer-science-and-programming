@@ -74,8 +74,8 @@
             tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Controls.Add(panel3, 2, 0);
@@ -89,10 +89,11 @@
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33333F));
-            tableLayoutPanel1.Size = new Size(763, 415);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333359F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(763, 429);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -102,7 +103,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(247, 131);
+            panel1.Size = new Size(246, 135);
             panel1.TabIndex = 4;
             // 
             // lblCharacter
@@ -132,9 +133,9 @@
             panel2.Controls.Add(lblHealth);
             panel2.Controls.Add(label3);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(258, 4);
+            panel2.Location = new Point(257, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(247, 131);
+            panel2.Size = new Size(247, 135);
             panel2.TabIndex = 5;
             // 
             // lblHealth
@@ -164,9 +165,9 @@
             panel3.Controls.Add(lblLuck);
             panel3.Controls.Add(label4);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(512, 4);
+            panel3.Location = new Point(511, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(247, 131);
+            panel3.Size = new Size(248, 135);
             panel3.TabIndex = 6;
             // 
             // lblLuck
@@ -196,9 +197,9 @@
             panel4.Controls.Add(lblEnergy);
             panel4.Controls.Add(label5);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(4, 142);
+            panel4.Location = new Point(4, 146);
             panel4.Name = "panel4";
-            panel4.Size = new Size(247, 131);
+            panel4.Size = new Size(246, 135);
             panel4.TabIndex = 7;
             // 
             // lblEnergy
@@ -228,9 +229,9 @@
             panel5.Controls.Add(lblLogic);
             panel5.Controls.Add(label6);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(258, 142);
+            panel5.Location = new Point(257, 146);
             panel5.Name = "panel5";
-            panel5.Size = new Size(247, 131);
+            panel5.Size = new Size(247, 135);
             panel5.TabIndex = 8;
             // 
             // lblLogic
@@ -260,9 +261,9 @@
             panel6.Controls.Add(lblDuty);
             panel6.Controls.Add(label7);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(512, 142);
+            panel6.Location = new Point(511, 146);
             panel6.Name = "panel6";
-            panel6.Size = new Size(247, 131);
+            panel6.Size = new Size(248, 135);
             panel6.TabIndex = 9;
             // 
             // lblDuty
@@ -292,9 +293,9 @@
             panel7.Controls.Add(lblInterest);
             panel7.Controls.Add(label8);
             panel7.Dock = DockStyle.Fill;
-            panel7.Location = new Point(4, 280);
+            panel7.Location = new Point(4, 288);
             panel7.Name = "panel7";
-            panel7.Size = new Size(247, 131);
+            panel7.Size = new Size(246, 137);
             panel7.TabIndex = 10;
             // 
             // lblInterest
@@ -324,9 +325,9 @@
             panel8.Controls.Add(lblLabour);
             panel8.Controls.Add(label9);
             panel8.Dock = DockStyle.Fill;
-            panel8.Location = new Point(258, 280);
+            panel8.Location = new Point(257, 288);
             panel8.Name = "panel8";
-            panel8.Size = new Size(247, 131);
+            panel8.Size = new Size(247, 137);
             panel8.TabIndex = 11;
             // 
             // lblLabour
@@ -356,9 +357,9 @@
             panel9.Controls.Add(lblMind);
             panel9.Controls.Add(label10);
             panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(512, 280);
+            panel9.Location = new Point(511, 288);
             panel9.Name = "panel9";
-            panel9.Size = new Size(247, 131);
+            panel9.Size = new Size(248, 137);
             panel9.TabIndex = 12;
             // 
             // lblMind
@@ -383,19 +384,21 @@
             label10.Text = "Ум, память";
             label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // FormPythagoreanSquare
+            // PythagoreanSquareForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(763, 415);
+            ClientSize = new Size(763, 429);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "FormPythagoreanSquare";
+            Name = "PythagoreanSquareForm";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Квадрат Пифагора";
+            KeyDown += PythagoreanSquareForm_KeyDown;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

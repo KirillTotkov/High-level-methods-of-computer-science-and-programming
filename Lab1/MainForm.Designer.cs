@@ -52,7 +52,7 @@
             btnRemoveSuper = new Button();
             label9 = new Label();
             btnSaveForm = new Button();
-            button1 = new Button();
+            btnOpenPythagoreanSquare = new Button();
             errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
@@ -114,7 +114,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(58, 280);
+            checkBox1.Location = new Point(58, 283);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(215, 27);
             checkBox1.TabIndex = 6;
@@ -259,15 +259,16 @@
             btnSaveForm.UseVisualStyleBackColor = true;
             btnSaveForm.Click += btnSaveForm_Click;
             // 
-            // button1
+            // btnOpenPythagoreanSquare
             // 
-            button1.Location = new Point(89, 687);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 37);
-            button1.TabIndex = 13;
-            button1.Text = "Расчёт Квадрата Пифагора ";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnOpenPythagoreanSquare.Cursor = Cursors.Hand;
+            btnOpenPythagoreanSquare.Location = new Point(89, 687);
+            btnOpenPythagoreanSquare.Name = "btnOpenPythagoreanSquare";
+            btnOpenPythagoreanSquare.Size = new Size(242, 37);
+            btnOpenPythagoreanSquare.TabIndex = 13;
+            btnOpenPythagoreanSquare.Text = "Расчёт Квадрата Пифагора ";
+            btnOpenPythagoreanSquare.UseVisualStyleBackColor = true;
+            btnOpenPythagoreanSquare.Click += btnOpenPythagoreanSquare_Click;
             // 
             // errorProvider1
             // 
@@ -276,10 +277,11 @@
             // 
             // MainForm
             // 
+            AcceptButton = btnSaveForm;
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(812, 756);
-            Controls.Add(button1);
+            Controls.Add(btnOpenPythagoreanSquare);
             Controls.Add(btnSaveForm);
             Controls.Add(label9);
             Controls.Add(btnRemoveSuper);
@@ -340,7 +342,7 @@
         private Button btnRemoveSuper;
         private Label label9;
         private Button btnSaveForm;
-        private Button button1;
+        private Button btnOpenPythagoreanSquare;
         private ErrorProvider errorProvider1;
     }
 }
