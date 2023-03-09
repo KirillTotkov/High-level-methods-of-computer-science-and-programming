@@ -145,7 +145,6 @@
             tbFullName.Name = "tbFullName";
             tbFullName.Size = new Size(356, 30);
             tbFullName.TabIndex = 1;
-            tbFullName.Validating += tbFullName_Validating;
             // 
             // tbFood
             // 
@@ -153,7 +152,6 @@
             tbFood.Name = "tbFood";
             tbFood.Size = new Size(356, 30);
             tbFood.TabIndex = 4;
-            tbFood.Validating += tbFood_Validating;
             // 
             // textBox3
             // 
@@ -161,7 +159,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(356, 30);
             textBox3.TabIndex = 7;
-            textBox3.Validating += textBox3_Validating;
             // 
             // dateTimePicker1
             // 
@@ -169,7 +166,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(356, 30);
             dateTimePicker1.TabIndex = 2;
-            dateTimePicker1.Value = new DateTime(2023, 2, 21, 0, 0, 0, 0);
+            dateTimePicker1.Value = new DateTime(2000, 12, 6, 0, 0, 0, 0);
             // 
             // cbZodiac
             // 
@@ -187,7 +184,6 @@
             tbMusicGroup.Name = "tbMusicGroup";
             tbMusicGroup.Size = new Size(356, 30);
             tbMusicGroup.TabIndex = 5;
-            tbMusicGroup.Validating += tbMusicGroup_Validating;
             // 
             // comboBox2
             // 
@@ -201,6 +197,7 @@
             // 
             // lstSuperheroesFrom
             // 
+            lstSuperheroesFrom.AllowDrop = true;
             lstSuperheroesFrom.FormattingEnabled = true;
             lstSuperheroesFrom.ItemHeight = 23;
             lstSuperheroesFrom.Items.AddRange(new object[] { "Черная пантера", "Бэтмен ", "Зеленый фонарь", "Человек-муравей", "Соколиный глаз", "Чудо-женщина" });
@@ -212,6 +209,7 @@
             // 
             // lstSuperheroesTo
             // 
+            lstSuperheroesTo.AllowDrop = true;
             lstSuperheroesTo.FormattingEnabled = true;
             lstSuperheroesTo.ItemHeight = 23;
             lstSuperheroesTo.Location = new Point(424, 478);

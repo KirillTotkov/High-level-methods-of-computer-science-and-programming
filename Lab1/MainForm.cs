@@ -7,15 +7,12 @@ namespace Lab1
         public MainForm()
         {
             InitializeComponent();
-            btnSaveForm.Enabled = false;
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             cbZodiac.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
         }
-
         private void MoveSelectedItems(ListBox listBoxFrom, ListBox listBoxTo)
         {
             for (int i = listBoxFrom.SelectedItems.Count - 1; i >= 0; i--)
@@ -50,52 +47,43 @@ namespace Lab1
                 $"<p> <b>Супергерои</b>: " +
                 $"{String.Join(", ", lstSuperheroesTo.Items.Cast<object>().ToArray())} <p>";
 
-            //Program.SendEmailFromMailRu("k.totkov@yandex.ru", "Тест 2", mess);
-            MessageBox.Show("Test");
+            if (CheckTextBoxes())
+            {
+                Mail.SendEmailFromMailRu("k.totkov@yandex.ru", "Test 3", mess);
+            }
 
+        }
+
+        private bool CheckTextBoxes()
+        {
+            bool allValid = true;
+            foreach (Control c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox tb = (TextBox)c;
+                    if (String.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        errorProvider1.SetError(tb, "Пожалуйста, введите значение");
+                        allValid = false;
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(tb, "");
+                    }
+                }
+            }
+
+            return allValid;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime date = dateTimePicker1.Value;
 
-            Form form = new FormPythagoreanSquare(date);
+            Form form = new PythagoreanSquareForm(date);
             form.ShowDialog();
         }
 
-        private void ValidatingTextBox(TextBox textBox)
-        {
-            if (String.IsNullOrWhiteSpace(textBox.Text))
-            { 
-                textBox.Focus();
-                errorProvider1.SetError(textBox, "Пожалуйста, введите значение");
-                btnSaveForm.Enabled = false;
-            }
-            else
-            {
-                errorProvider1.SetError(textBox, "");
-                btnSaveForm.Enabled = true;
-            }
-        }
-
-        private void tbFullName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            ValidatingTextBox(tbFullName);
-        }
-
-        private void tbFood_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            ValidatingTextBox(tbFood);
-        }
-
-        private void tbMusicGroup_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            ValidatingTextBox(tbMusicGroup);
-        }
-
-        private void textBox3_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            ValidatingTextBox(textBox3);
-        }
     }
 }
